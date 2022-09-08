@@ -1,0 +1,18 @@
+{
+  "menu": [
+    {
+      "id": "tools",
+      "submenu": [
+        {
+          "label": "MDA FEMSA DH",
+          "id": "tools.ddl",
+          "submenu": [
+            { "label": "Generate FEMSA DH MDA Code...", "id": "tools.ddl.generate", "command": "ddl:generate" },
+            { "type": "separator" },
+            { "label": "Configure...", "id": "tools.ddl.configure", "command": "ddl:configure" }
+          ]
+        }
+      ]
+    }
+  ]
+}
