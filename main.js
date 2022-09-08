@@ -1,16 +1,6 @@
 
 const ddlGenerator = require('./ddl-generator')
 
-function getGenOptions () {
-  return {
-    fileExtension: app.preferences.get('ddl.gen.fileExtension'),
-    quoteIdentifiers: app.preferences.get('ddl.gen.quoteIdentifiers'),
-    dropTable: app.preferences.get('ddl.gen.dropTable'),
-    dbms: app.preferences.get('ddl.gen.dbms'),
-    useTab: app.preferences.get('ddl.gen.useTab'),
-    indentSpaces: app.preferences.get('ddl.gen.indentSpaces')
-  }
-}
 
 /**
  * Command Handler for DDL Generation
@@ -20,16 +10,15 @@ function getGenOptions () {
  * @param {Object} options
  */
 function _handleGenerate (base, path, options) {
-  // If options is not passed, get from preference
-  options = options || getGenOptions()
+
   // If base is not assigned, popup ElementPicker
   if (!base) {
-    app.elementPickerDialog.showDialog('Select a data model to generate DDL', null, type.ERDDataModel).then(function ({buttonId, returnValue}) {
+    app.elementPickerDialog.showDialog('Select a data model to generate MDA', null, type.ERDDataModel).then(function ({buttonId, returnValue}) {
       if (buttonId === 'ok') {
         base = returnValue
         // If path is not assigned, popup Save Dialog to save a file
         if (!path) {
-          var file = app.dialogs.showSaveDialog('Save DDL As...', null, null)
+          var file = app.dialogs.showSaveDialog('Save MDA As...', null, null)
           if (file && file.length > 0) {
             path = file
             ddlGenerator.generate(base, path, options)
@@ -57,12 +46,12 @@ function _handleGenerate (base, path, options) {
 * Popup PreferenceDialog with DDL Preference Schema
 */
 function _handleConfigure () {
-  app.commands.execute('application:preferences', 'ddl')
+  app.commands.execute('application:preferences', 'mda')
 }
 
 function init () {
-  app.commands.register('ddl:generate', _handleGenerate)
-  app.commands.register('ddl:configure', _handleConfigure)
+  app.commands.register('mda:generate', _handleGenerate)
+  app.commands.register('mda:configure', _handleConfigure)
 }
 
 exports.init = init
