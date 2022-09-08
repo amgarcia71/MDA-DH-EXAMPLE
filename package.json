@@ -1,19 +1,20 @@
 {
-  "name": "amg.staruml-ddl",
-  "title": "PILOT",
-  "description": "Generate PILOT code from ERD",
-  "homepage": "https://github.com/niklauslee/staruml-ddl",
-  "issues": "https://github.com/niklauslee/staruml-ddl/issues",
+  "name": "femsa.staruml-mda",
+  "title": "MDA FEMSA",
+  "description": "Generate FEMSA DH code from ERD",
+  "homepage": "https://github.com/amgarcia71/MDA-DH-FEMSA",
+  "issues": "https://github.com/amgarcia71/MDA-DH-FEMSA",
   "keywords": [
+    "mda",
     "ddl",
     "erd",
     "database"
   ],
   "version": "0.0.2",
   "author": {
-    "name": "AMG",
-    "email": "niklaus.lee@gmail.com",
-    "url": "https://github.com/niklauslee"
+    "name": "DH-FEMSA",
+    "email": "dh@femsa.com",
+    "url": "https://github.com/amgarcia71/MDA-DH-FEMSA"
   },
   "license": "MIT",
   "engines": {
