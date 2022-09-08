@@ -5,11 +5,11 @@
       "submenu": [
         {
           "label": "MDA FEMSA DH",
-          "id": "tools.ddl",
+          "id": "tools.mda",
           "submenu": [
-            { "label": "Generate FEMSA DH MDA Code...", "id": "tools.ddl.generate", "command": "ddl:generate" },
+            { "label": "Generate FEMSA DH MDA Code...", "id": "tools.mda.generate", "command": "mda:generate" },
             { "type": "separator" },
-            { "label": "Configure...", "id": "tools.ddl.configure", "command": "ddl:configure" }
+            { "label": "Configure...", "id": "tools.mda.configure", "command": "mda:configure" }
           ]
         }
       ]
